@@ -1,4 +1,4 @@
-package com.epam.springclouddemo.sender;
+package com.epam.springclouddemo.developer;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
