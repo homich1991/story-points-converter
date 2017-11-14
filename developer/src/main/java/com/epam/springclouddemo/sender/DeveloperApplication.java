@@ -36,7 +36,7 @@ public class DeveloperApplication {
     private final int[] time = {1, 2, 4, 8, 16, 80};
 
     @Autowired
-    RestTemplate restTemplate;
+    private RestTemplate restTemplate;
 
     @Bean
     public RestTemplate restTemplate() {
