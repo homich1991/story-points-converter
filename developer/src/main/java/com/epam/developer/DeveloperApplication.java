@@ -1,4 +1,4 @@
-package com.epam.springclouddemo.developer;
+package com.epam.developer;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
