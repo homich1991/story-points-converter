@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.epam</groupId>
-    <artifactId>hours-producer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>deep-thought</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
 
-    <name>hours-producer</name>
+    <name>deep-thought</name>
     <packaging>jar</packaging>
 
     <parent>

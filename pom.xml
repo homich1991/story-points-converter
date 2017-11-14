@@ -8,8 +8,8 @@
     <artifactId>story-point-converter</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>hours-producer</module>
-        <module>to-storypoints-converter</module>
+        <module>developer</module>
+        <module>deep-thought</module>
     </modules>
     <packaging>pom</packaging>
 

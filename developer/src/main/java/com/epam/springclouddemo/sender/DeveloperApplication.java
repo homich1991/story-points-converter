@@ -12,7 +12,7 @@ import java.util.Random;
 
 @SpringBootApplication
 @RestController
-public class ProducerApplication {
+public class DeveloperApplication {
 
     @GetMapping("/getTime")
     public Integer getTime() {
@@ -20,7 +20,8 @@ public class ProducerApplication {
 
         System.out.println("I think it would take " + hours + " hours");
 
-        Integer receivedValue = restTemplate.getForObject("http://localhost:8081/convert/" + hours, Integer.class);
+        Integer receivedValue = restTemplate.getForObject("http://localhost:8081/convert/" + hours,
+                Integer.class);
 
         System.out.println("Lead said it is " + receivedValue + " story points");
         System.out.println("\n");
@@ -43,6 +44,6 @@ public class ProducerApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ProducerApplication.class, args);
+        SpringApplication.run(DeveloperApplication.class, args);
     }
 }

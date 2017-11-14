@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-public class ConverterApplication {
+public class DeepThoughtApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConverterApplication.class, args);
+        SpringApplication.run(DeepThoughtApplication.class, args);
     }
 
     @GetMapping("/convert/{hours}")

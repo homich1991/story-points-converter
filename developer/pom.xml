@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.epam</groupId>
-    <artifactId>to-storypoints-converter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>developer</artifactId>
+    <version>1.0-SNAPSHOT</version>
 
 
-    <name>to-storypoints-converter</name>
+    <name>developer</name>
     <packaging>jar</packaging>
 
     <parent>
