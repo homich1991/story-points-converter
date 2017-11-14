@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>eureka</module>
-        <module>developer</module>
         <module>deep-thought</module>
+        <module>developer</module>
     </modules>
     <packaging>pom</packaging>
 
