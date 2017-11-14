@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 @EnableEurekaClient
-public class DeepThoughtApplication {
+public class DeepThoughtApplication implements DeepThought {
 
     public static void main(String[] args) {
         SpringApplication.run(DeepThoughtApplication.class, args);
     }
 
+    @Override
     @GetMapping("/convert/{hours}")
     public Integer convert(@PathVariable("hours") int hours) {
         int storyPoints = convertFunction(hours);

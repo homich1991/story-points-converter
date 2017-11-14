@@ -9,19 +9,13 @@ import org.springframework.web.client.RestTemplate;
 
 @Component
 public class DeepThoughtCaller {
-    @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
 
     @Autowired
-    private RestTemplate restTemplate;
+    private DeepThoughtFeign deepThoughtFeign;
 
     @HystrixCommand(fallbackMethod = "fallback")
     public Integer getStoryPoints(int hours) {
-        return restTemplate.getForObject("http://deep-thought/convert/" + hours,
-                Integer.class);
+        return deepThoughtFeign.convert(hours);
     }
 
     private Integer fallback(int hours) {
