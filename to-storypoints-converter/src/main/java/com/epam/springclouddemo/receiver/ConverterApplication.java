@@ -16,11 +16,10 @@ public class ConverterApplication {
 
     @GetMapping("/convert/{hours}")
     public Integer convert(@PathVariable("hours") int hours) {
-        System.out.println("I receive " + hours);
-
         int storyPoints = convertFunction(hours);
 
-        System.out.println("In story points it would be " + storyPoints);
+        System.out.println(hours +" hours in story points would be " + storyPoints);
+        System.out.println("\n");
         return storyPoints;
     }
 

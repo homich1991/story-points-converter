@@ -17,9 +17,14 @@ public class ProducerApplication {
     @GetMapping("/getTime")
     public Integer getTime() {
         int hours = generateTime();
-        System.out.println("I think it would take " + hours + "hours");
+
+        System.out.println("I think it would take " + hours + " hours");
+
         Integer receivedValue = restTemplate.getForObject("http://localhost:8081/convert/" + hours, Integer.class);
+
         System.out.println("Lead said it is " + receivedValue + " story points");
+        System.out.println("\n");
+
         return receivedValue;
     }
 
