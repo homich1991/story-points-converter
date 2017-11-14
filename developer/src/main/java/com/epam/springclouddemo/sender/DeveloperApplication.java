@@ -3,6 +3,7 @@ package com.epam.springclouddemo.sender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
@@ -15,7 +16,11 @@ import java.util.Random;
 @SpringBootApplication
 @RestController
 @EnableEurekaClient
+@EnableCircuitBreaker
 public class DeveloperApplication {
+
+    @Autowired
+    private DeepThoughtCaller deepThoughtCaller;
 
     @GetMapping("/getTime")
     public String getTime() {
@@ -23,8 +28,7 @@ public class DeveloperApplication {
 
         System.out.println("I think it would take " + hours + " hours");
 
-        Integer receivedValue = restTemplate.getForObject("http://deep-thought/convert/" + hours,
-                Integer.class);
+        Integer receivedValue = deepThoughtCaller.getStoryPoints(hours);
 
         String result = "Let it be " + receivedValue + " story points";
         System.out.println(result + "\n");
@@ -37,15 +41,6 @@ public class DeveloperApplication {
     }
 
     private final int[] time = {1, 2, 4, 8, 16, 80};
-
-    @Autowired
-    private RestTemplate restTemplate;
-
-    @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(DeveloperApplication.class, args);
