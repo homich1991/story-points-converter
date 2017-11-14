@@ -15,7 +15,7 @@ import java.util.Random;
 public class DeveloperApplication {
 
     @GetMapping("/getTime")
-    public Integer getTime() {
+    public String getTime() {
         int hours = generateTime();
 
         System.out.println("I think it would take " + hours + " hours");
@@ -23,10 +23,10 @@ public class DeveloperApplication {
         Integer receivedValue = restTemplate.getForObject("http://localhost:8081/convert/" + hours,
                 Integer.class);
 
-        System.out.println("Lead said it is " + receivedValue + " story points");
-        System.out.println("\n");
+        String result = "Let it be " + receivedValue + " story points";
+        System.out.println(result + "\n");
 
-        return receivedValue;
+        return result;
     }
 
     private int generateTime() {
