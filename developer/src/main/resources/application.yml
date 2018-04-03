@@ -1,3 +1,9 @@
 spring:
   application:
     name: developer
+
+eureka:
+  client:
+    initial-instance-info-replication-interval-seconds: 2
+ribbon:
+  ServerListRefreshInterval: 1000

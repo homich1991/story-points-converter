@@ -8,8 +8,9 @@
     <artifactId>story-point-converter</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>developer</module>
+        <module>eureka</module>
         <module>deep-thought</module>
+        <module>developer</module>
     </modules>
     <packaging>pom</packaging>
 
