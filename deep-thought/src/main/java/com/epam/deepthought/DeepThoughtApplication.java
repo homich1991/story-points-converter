@@ -26,7 +26,9 @@ public class DeepThoughtApplication implements DeepThought {
         return storyPoints;
     }
 
+    //region Conversion function
     private int convertFunction(int hours) {
         return hours * 2;
     }
+    //endregion
 }
