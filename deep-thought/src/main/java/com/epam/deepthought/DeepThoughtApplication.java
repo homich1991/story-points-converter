@@ -25,7 +25,9 @@ public class DeepThoughtApplication {
         return storyPoints;
     }
 
+    //region Conversion function
     private int convertFunction(int hours) {
         return hours * 2;
     }
+    //endregion
 }
