@@ -11,6 +11,7 @@
         <module>eureka</module>
         <module>deep-thought</module>
         <module>developer</module>
+        <module>zuul</module>
     </modules>
     <packaging>pom</packaging>
 
