@@ -29,12 +29,6 @@ public class DeveloperApplication {
         return result;
     }
 
-    private int generateTime() {
-        return time[new Random().nextInt(time.length)];
-    }
-
-    private final int[] time = {1, 2, 4, 8, 16, 80};
-
     @Autowired
     private RestTemplate restTemplate;
 
@@ -42,6 +36,14 @@ public class DeveloperApplication {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
+    //region Time generator
+    private final int[] time = {1, 2, 4, 8, 16, 80};
+
+    private int generateTime() {
+        return time[new Random().nextInt(time.length)];
+    }
+    //endregion
 
     public static void main(String[] args) {
         SpringApplication.run(DeveloperApplication.class, args);
