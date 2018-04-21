@@ -19,8 +19,8 @@ public class DeveloperApplication {
     @Autowired
     private DeepThoughtCaller deepThoughtCaller;
 
-    @GetMapping("/getTime")
-    public String getTime() {
+    @GetMapping("/estimation")
+    public String getEstimation() {
         int hours = generateTime();
 
         System.out.println("I think it would take " + hours + " hours");
