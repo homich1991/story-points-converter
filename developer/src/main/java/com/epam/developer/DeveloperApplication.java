@@ -17,8 +17,8 @@ import java.util.Random;
 @EnableEurekaClient
 public class DeveloperApplication {
 
-    @GetMapping("/getTime")
-    public String getTime() {
+    @GetMapping("/estimation")
+    public String getEstimation() {
         int hours = generateTime();
 
         System.out.println("I think it would take " + hours + " hours");
