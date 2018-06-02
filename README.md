@@ -1,6 +1,6 @@
 # Story points converter
 
-This is demo application for EPAM Insider presentation.
+This is demo application for EPAM IT Weekend presentation.
 
 You may find working solutions in branches
 
