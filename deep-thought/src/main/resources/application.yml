@@ -7,5 +7,5 @@ server:
 eureka:
   client:
     initial-instance-info-replication-interval-seconds: 2
-ribbon:
-  ServerListRefreshInterval: 1000
+    instance-info-replication-interval-seconds: 1
+    registry-fetch-interval-seconds: 1
